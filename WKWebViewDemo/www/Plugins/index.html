@@ -1,0 +1,164 @@
+<!--这些都是HTML的基础呀,要好好学.-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>显示头部内容</head>
+<style>
+.blue {
+    color: #d9eef7;
+    border: solid 1px #0076a3;
+    background: #0095cd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+    background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+    height: 100px;
+    width:640px;
+    font-size:3em;
+    padding:20px;
+}
+.blue:hover {
+    background: #007ead;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+    background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+    height: 100px;
+    width:640px;
+    font-size:3em;
+    padding:20px;
+}
+.blue:active {
+    color: #80bed6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+    background: -moz-linear-gradient(top,  #0078a5,  #00adee);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+    height: 100px;
+    width:640px;
+    font-size:3em;
+    padding:20px;
+}
+
+.green {
+    color: #e8f0de;
+    border: solid 1px #538312;
+    background: #64991e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+    background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+    height: 100px;
+    width:640px;
+    font-size:3em;
+    padding:20px;
+}
+.green:hover {
+    background: #538018;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
+    background: -moz-linear-gradient(top,  #6b9d28,  #436b0c);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
+    height: 100px;
+    width:640px;
+    font-size:3em;
+    padding:20px;
+}
+.green:active {
+    color: #a9c08c;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
+    background: -moz-linear-gradient(top,  #4e7d0e,  #7db72f);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+    height: 100px;
+    width:640px;
+    font-size:3em;
+    padding:20px;
+}
+
+.pink {
+    color: #feeef5;
+    border: solid 1px #d2729e;
+    background: #f895c2;
+    background: -webkit-gradient(linear, left top, left bottom, from(#feb1d3), to(#f171ab));
+    background: -moz-linear-gradient(top,  #feb1d3,  #f171ab);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#feb1d3', endColorstr='#f171ab');
+    height: 100px;
+    width:640px;
+    font-size:3em;
+    padding:20px;
+}
+
+.pink:hover {
+    background: #d57ea5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4aacb), to(#e86ca4));
+    background: -moz-linear-gradient(top,  #f4aacb,  #e86ca4);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4aacb', endColorstr='#e86ca4');
+    height: 100px;
+    width:640px;
+    font-size:100;
+    padding:20px;
+}
+.pink:active {
+    color: #f3c3d9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f171ab), to(#feb1d3));
+    background: -moz-linear-gradient(top,  #f171ab,  #feb1d3);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f171ab', endColorstr='#feb1d3');
+    height: 100px;
+    width:640px;
+    font-size:3em;
+    padding:20px;
+}
+
+</style>
+<script language='javaScript'>
+function myFunction() {
+    
+    person = new Object();
+    person.firstname="Bill";
+    person.lastname="Gates";
+    person.age=56;
+    person.eyecolor="blue";
+    window.webkit.messageHandlers.jsCall.postMessage(person);
+
+    // window.webkit.messageHandlers.jsCall.postMessage('hello show message');
+    // window.webkit.messageHandlers.jsCall.postMessage('hello show function');
+}
+
+function share() {
+    shareInfo = new Object();
+    shareInfo.title = 'yida';
+    shareInfo.link = 'http://baidu.com';
+    shareInfo.image = '';
+    shareInfo.descript = '对于商品的描述信息';
+    return shareInfo;
+}
+
+function executeLogfunction() {
+    console.log('my name is yida');
+    console.show('show message');
+}
+
+function yidatest(){
+    window.webkit.messageHandlers.jsCall.postMessage('test');
+}
+
+</script>
+</head>
+
+<body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+    <div>
+        <button class="button pink" onclick="myFunction()" value='点击'>点击这里</button>
+    </div>
+    <p>
+    ********
+    </p>
+    <div>
+        <button class="button blue" onclick="yidatest()" value="测试">跳转</button>
+    </div>
+    ********
+    </p>
+    <div>
+        <button class="button green" onclick="executeLogfunction()" value="测试">执行函数</button>
+    </div>
+    <p>
+    
+</body>
+
+</html>
